@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   body {
+     font-family: 'Poppins', sans-serif;
+   }
+}
+
+.navbar-fixed {
+   @apply fixed z-50 bg-white bg-opacity-80 drop-shadow-md backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+}
+
+.hamburger-line {
+   @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+   @apply rotate-45 origin-top-left;
+} 
+.hamburger-active > span:nth-child(2) {
+   @apply scale-0;
+} 
+.hamburger-active > span:nth-child(3) {
+   @apply -rotate-45 origin-bottom-left;
+} 
+
+#dark-toggle:checked + label div.toggle-circle {
+   @apply translate-x-3;
+}
